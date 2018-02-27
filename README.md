@@ -80,6 +80,7 @@ Test image below:
 
 ![Test Image](https://github.com/leifbr/Mytest/blob/master/readme-images/test-pic.jpg)
 
+![Test Image](readme-images/test-pic.jpg)
 
 end test
 
