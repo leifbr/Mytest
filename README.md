@@ -76,4 +76,9 @@ The repo includes build scripts for common operations:
 Creating or Building a Class
 ----------------------------
 
+Test image below:
+
+![Test Image](https://github.com/leifbr/Mytest "My Test Image")
+
+end test
 
