@@ -78,11 +78,8 @@ Creating or Building a Class
 
 Test image below:
 
-![Test Image](https://github.com/leifbr/Mytest/tree/master/readme-images/test-pic.jpg "My Test Image")
+![Test Image](https://github.com/leifbr/Mytest/tree/master/readme-images/test-pic.jpg?raw=true "My Test Image")
 
-![Test Image](/leifbr/Mytest/tree/master/readme-images/test-pic.jpg "My Test Image")
-
-![Test Image](Mytest/tree/master/readme-images/test-pic.jpg "My Test Image")
 
 end test
 
