@@ -45,11 +45,11 @@ Preparing to Build a New Class (lab guide)
  
 Building a new class/lab guide:
 
-#. Copy contents of the **f5-agility-lab-template** repo to a new directory 
+#. Copy contents of the **f5-agility-lab-template** repo to a new directory (new repo)
    - ``cp -Rf <f5-agility-lab-template directory> /path/to/your/newclass``
-#. Go to your new directory 
-   - ``cd /path/to/your/newclas``
-#. Edit ``docs/conf.py``
+#. Go to your new directory/repo
+   - ``cd /path/to/your/newclass``
+#. Edit the``docs/conf.py``
 #. Modify the following lines:
 
    - ``classname = "Your Class Name"``
@@ -58,9 +58,12 @@ Building a new class/lab guide:
 #. Build docs ``./containthedocs-build.sh`` (*see* **Build Scripts** *below*)
 #. Open the ``docs/_build/html/index.html`` file on you system in a web browser
 #. Create/edit the ``*.rst`` files as needed for your class (*see* **Creating and Building Classes** *below*)
+
+![Default-Lab-Page](/readme-images/default-lab-page.jpg)
+
 #. Check your work as you make changes by running:
     - ``./containthedocs-build.sh``
-       - This will rebuild the the html files
+       - This will rebuild the the html files from the RsT files
 
 Converting from Microsoft Word
 ------------------------------
@@ -78,12 +81,17 @@ You can convert a ``.docx`` file from Microsoft Work to reStructuredText to begi
 Creating or Building a Class
 ----------------------------
 
-These are the ReSTructured text files used to create the lab.
+These are the ReSTructured text files used to create the lab(s) HTML files.
 
-
-![Lab_RsT_Files](readme-images/lab-rest-files.jpg.jpg)
+![Lab_RsT_Files](/readme-images/lab-rest-files.jpg)
 
 #. Want to add a new class/lab to your cloud document.  Create a new class directory and class RsT file:
+
     - ``mkdir /<repo-path>/docs/class**X**``
     - ``cp /repo-path/docs/class1/class1.rst /<repo-path>/docs/class**X**/class**X**.rst``
+
+#. Want to add a module to your class.  Create a new module directory and module RsT file:
+
+    - ``mkdir /<repo-path>/docs/class**X**/moduleX``
+    - ``cp /repo-path/docs/class1/classX.rst /<repo-path>/docs/class**X**/class**X**.rst``
 
