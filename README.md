@@ -11,6 +11,9 @@ Setup
 -----
 
 #. Download or ``git clone`` the f5-agility-lab-template
+
+   - ``git clone https://github.com/0xHiteshPatel/f5-agility-lab-template``
+
 #. Download and install Docker CE (https://docs.docker.com/engine/installation/)
 #. Build the sample docs ``./containthedocs-build.sh``. The first time you build
    a container (~1G in size) will be downloaded from Docker Hub.
@@ -18,44 +21,8 @@ Setup
 
    - ``For example: file:///f5-agility-lab-template/docs/_build/html/index.html``
 
-#. This will give you examples of the class and module layout, ReSTructure (.rst) text 
-#. examples and syntax.  
-#. To get a better idea of where the ``.rst`` file reside, how new module and classes
-#. are created, go to the class create section below.
-
-Configuration & Use
--------------------
-
-To use this template:
-
-#. Copy contents of this repo to a new directory ``cp -Rf . /path/to/your/docs``
-#. ``cd /path/to/your/docs``
-#. Edit ``docs/conf.py``
-#. Modify the following lines:
-
-   - ``classname = "Your Class Name"``
-   - ``github_repo = "https://github.com/f5devcentral/your-class-repo"``
-
-#. Build docs ``./containthedocs-build.sh`` (*see Build Scripts below*)
-#. Open the ``docs/_build/html/index.html`` file on you system in a web browser
-#. Edit the ``*.rst`` files as needed for your class
-#. Rebuild docs as needed using ``./containthedocs-build.sh``
-
-Converting from Microsoft Word
-------------------------------
-
-To convert a ``.docx`` file from Microsoft Work to reStructuredText:
-
-#. Copy your ``.docx`` file into the f5-agility-lab-template directory
-#. Run ``./containthedocs-convert.sh <filename.docx>``
-#. Your converted file will be named ``filename.rst``
-#. Images in your document will be extracted and placed in the ``media``
-   directory
-
-.. WARNING:: While the document has been converted to rST format you will still
-   need to refactor the rST to use the structure implemented in this template.
-
-.. _scripts:
+#. This will give you examples of the class and module layout, ReSTructure (.rst) text examples and syntax.  
+#. To get a better idea of where the ``.rst`` files reside, how new classes and modules are created go the **Creating and Building Classes** section below.
 
 Build Scripts
 -------------
@@ -73,14 +40,50 @@ The repo includes build scripts for common operations:
 - ``containthedocs-pdf.sh``: Build PDF docs using ``make -C docs latexpdf`` to
   ``docs/_build/latex``
 
+Preparing to Build a New Class (lab guide)
+------------------------------------------
+ 
+Building a new class/lab guide:
+
+#. Copy contents of the **f5-agility-lab-template** repo to a new directory 
+   - ``cp -Rf <f5-agility-lab-template directory> /path/to/your/newclass``
+#. Go to your new directory 
+   - ``cd /path/to/your/newclas``
+#. Edit ``docs/conf.py``
+#. Modify the following lines:
+
+   - ``classname = "Your Class Name"``
+   - ``github_repo = "https://github.com/f5devcentral/your-class-repo"``
+
+#. Build docs ``./containthedocs-build.sh`` (*see* **Build Scripts** *below*)
+#. Open the ``docs/_build/html/index.html`` file on you system in a web browser
+#. Create/edit the ``*.rst`` files as needed for your class (*see* **Creating and Building Classes** *below*)
+#. Check your work as you make changes by running:
+    - ``./containthedocs-build.sh``
+       - This will rebuild the the html files
+
+Converting from Microsoft Word
+------------------------------
+
+You can convert a ``.docx`` file from Microsoft Work to reStructuredText to begin building the class/lab:
+
+#. Copy your ``.docx`` file into the f5-agility-lab-template class directory you built
+#. Run ``./containthedocs-convert.sh <filename.docx>``
+#. Your converted file will be named ``filename.rst``
+#. Images in your document will be extracted and placed in the ``media`` in the f5-agility-lab-template class directory you built. 
+
+.. WARNING:: While the document has been converted to rST format you will still
+   need to refactor the rST to use the structure implemented in this template. In otherwords, you will have to edit the **.rst** file for conversion errors and to correctly point to the images.
+   
 Creating or Building a Class
 ----------------------------
 
-Test image below:
+These are the ReSTructured text files used to create the lab.
 
-![Test Image](https://github.com/leifbr/Mytest/blob/master/readme-images/test-pic.jpg)
 
-![Test Image](readme-images/test-pic.jpg)
+![Lab_RsT_Files](readme-images/lab-rest-files.jpg.jpg)
 
-end test
+#. Want to add a new class/lab to your cloud document.  Create a new class directory and class RsT file:
+    - ``mkdir /<repo-path>/docs/class**X**``
+    - ``cp /repo-path/docs/class1/class1.rst /<repo-path>/docs/class**X**/class**X**.rst``
 
